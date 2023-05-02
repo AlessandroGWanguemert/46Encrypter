@@ -1,0 +1,167 @@
+:root{
+    --ColorPrimario: #00ffaa ;
+    --Bgcolor: #323236;
+    --BgcolorComplement:#474747c9;
+    --BlancoTransparenteBorde:#ffffffb7;
+    --FondoTransparente:#ffffff4d;
+    --BgColorDarkTransparent:#2929293a;
+}
+body{
+   
+    overflow-x: hidden;
+}
+
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  /*--------------------------Nav--------------------------------*/ 
+  nav {
+    background-color: transparent;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #999;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform, color;
+    transition-duration: 0.5s;
+  }
+  
+  nav a:hover {
+    color: #ff014d;
+    transform: scale(2);
+  }
+ /*--------------------------Sec1--------------------------------*/ 
+ .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    width: auto;
+    max-width: 800px;
+    align-items: center;
+    margin: 10rem auto;
+    padding: 2rem;
+    background-color: var(--FondoTransparente) ;
+    border: solid 1px var(--BlancoTransparenteBorde);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+  
+  textarea {
+    width: 40rem;
+    height: 7rem;
+    max-width: 100%;
+    max-height: 200px;
+    background-color: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    resize: none;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 0px;
+    font-size: 17pt;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline-style: none;
+    text-decoration: none;
+   
+    
+  }
+  textarea::placeholder {
+      text-align: center;
+      font-size: 17pt;
+      }
+  button {
+    padding: 10px 20px;
+    margin: 3rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transition: transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  
+  #texto-encriptado {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    
+  }
+  
+
+ /* Estilos para el modo oscuro */
+body.dark {
+    background-image: url(img/38469.jpg);
+    color: #fff;
+    background-size: cover;
+  }
+  
+.dark .container{
+    background-color: var(--BgColorDarkTransparent) ;
+    color: #fff;
+    border-color: var(--FondoTransparente);
+}
+.dark h1 {
+    color: #fff;
+  }
+  
+  .dark textarea {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .dark button {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .dark button:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .dark #texto-encriptado {
+    color: #fff;
+  }
+  .dark  nav a:hover {
+    color: #fff;
+  }
