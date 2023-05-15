@@ -5,6 +5,7 @@
     --BlancoTransparenteBorde:#ffffffb7;
     --FondoTransparente:#ffffff1c;
     --BgColorDarkTransparent:#2929293a;
+    --letra:#999;
 }
 body{
    
@@ -44,7 +45,7 @@ body {
   }
   
   nav a {
-    color: #999;
+    color: var(--letra);
     text-decoration: none;
     font-size: 18px;
     transition: transform, color;
@@ -73,6 +74,17 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(20px);
   }
+
+  .Switch{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: var(--letra);
+  }
+  .Switch h3 {
+    font-size: 18px;
+    margin: 0.5rem;
+  }
   
   h1 {
     font-size: 40px;
@@ -97,6 +109,7 @@ body {
     border-bottom: 1px solid #ccc;
     outline-style: none;
     text-decoration: none;
+    color: #fff;
    
     
   }
