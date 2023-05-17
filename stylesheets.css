@@ -124,32 +124,32 @@ body {
     position: relative;
     opacity: 0%;
     bottom: 1rem;
-    transition: opacity 2s, transform 1s;
+    transition: opacity 2s;
     
   }
   .h16{
     position: relative;
     opacity: 0%;
     top: 1rem;
-    transition: opacity 2.5s, transform 1s;
+    transition: opacity 2.5s;
   }
   .Encrypth1{
     position: relative;
     left: 1rem;
     opacity: 0%;
-    transition: opacity 3s, transform 1s;
+    transition: opacity 3s;
   }
   .h14.show{
     opacity: 100%;
-    transform: translateY(-0.5rem);
+    transform: translateY(-1rem);
   }
   .h16.show{
     opacity: 100%;
-    transform: translateY(0.5rem);
+    transform: translateY(1rem);
   }
   .Encrypth1.show{
     opacity: 100%;
-    transform: translateX(-0.5rem);
+    transform: translateX(-1rem);
   }
   
   
