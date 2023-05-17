@@ -79,9 +79,9 @@ window.onload = function(){
       if (numerosEncriptados[i] === "") {
         continue;
       }
-      let numeroEncriptado = parseInt(numerosEncriptados[i]);
+      let numerosEncriptados = parseInt(numerosEncriptados[i]);
     }
-      if (isNaN(numeroEncriptado)) {
+      if (isNaN(numerosEncriptados)) {
         return null;
       }
   
