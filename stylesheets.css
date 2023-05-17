@@ -121,17 +121,20 @@ body {
   }
   
   .h14{
+    position: relative;
     opacity: 0%;
     bottom: 0.5rem;
     transition: opacity 2s;
     
   }
   .h16{
+    position: relative;
     opacity: 0%;
     top: 0.5rem;
     transition: opacity 2.5s;
   }
   .Encrypth1{
+    position: relative;
     right: 0.5rem;
     opacity: 0%;
     transition: opacity 3s;
