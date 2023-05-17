@@ -123,7 +123,8 @@ body {
   .h14{
     opacity: 0%;
     bottom: 0.5rem;
-    transition: opacity 2s, transform 2s;
+    transition: opacity 2s;
+    transition: transform 2s;
   }
   .h16{
     opacity: 0%;
