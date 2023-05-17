@@ -68,6 +68,38 @@ window.onload = function() {
     return textoEncriptado.trim();
   }
 
+  function encriptarTexto(texto) {
+    if (texto.length > 200) {
+      return null;
+    }
+  
+    let palabras = texto.trim().split(" ");
+    let palabrasEncriptadas = [];
+  
+    for (let i = 0; i < palabras.length; i++) {
+      let palabra = palabras[i];
+      let palabraEncriptada = "";
+  
+      for (let j = 0; j < palabra.length; j++) {
+        let caracter = palabra[j];
+  
+        if (!esLetra(caracter)) {
+          return null;
+        }
+  
+        let codigoAscii = caracter.charCodeAt(0);
+        let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
+        palabraEncriptada += codigoEncriptado + ",";
+      }
+  
+      palabrasEncriptadas.push(palabraEncriptada.slice(0, -1));
+    }
+  
+    let textoEncriptado = palabrasEncriptadas.join(" ");
+  
+    return textoEncriptado;
+  }
+  
   function desencriptarTexto(texto) {
     if (texto.length > 200) {
       return null;
@@ -93,7 +125,7 @@ window.onload = function() {
           return null;
         }
   
-        let codigoAscii = Math.round((numeroEncriptado * 60) / 4);
+        let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
         palabraDesencriptada += caracterDesencriptado;
       }
@@ -105,5 +137,6 @@ window.onload = function() {
   
     return textoDesencriptado;
   }
+  
   
 }
