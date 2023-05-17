@@ -117,7 +117,7 @@ body {
     font-size: 3.5rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
-    transition: opacity 2.5s;
+    
   }
   
   .h14{
@@ -138,6 +138,8 @@ body {
     left: 1rem;
     opacity: 0%;
     transition: opacity 3s;
+    transition-property: transform ;
+    transition-duration: 1s;
   }
   .h14.show{
     opacity: 100%;
