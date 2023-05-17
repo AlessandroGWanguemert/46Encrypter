@@ -76,7 +76,7 @@ window.onload = function(){
     let textoDesencriptado = "";
   
     for (let i = 0; i < numerosEncriptados.length; i++) {
-      if (numerosEncriptados[i] === "") {
+      if (numerosEncriptado[i] === "") {
         continue;
       }
       let numeroEncriptado = parseInt(numerosEncriptados[i]);
