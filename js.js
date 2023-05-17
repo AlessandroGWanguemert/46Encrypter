@@ -60,7 +60,7 @@ window.onload = function() {
         textoEncriptado += " ";
       } else {
         let codigoAscii = texto.charCodeAt(i);
-        let codigoEncriptado = Math.round((codigoAscii * 6) / 4);
+        let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
         textoEncriptado += codigoEncriptado + " ";
       }
     }
@@ -85,7 +85,7 @@ window.onload = function() {
         return null;
       }
 
-      let codigoAscii = Math.round((numeroEncriptado * 4) / 6);
+      let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
       let caracterDesencriptado = String.fromCharCode(codigoAscii);
       textoDesencriptado += caracterDesencriptado;
     }
