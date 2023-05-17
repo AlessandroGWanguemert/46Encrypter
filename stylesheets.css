@@ -141,15 +141,15 @@ body {
   }
   .h14.show{
     opacity: 100%;
-    transform: translateY(-1rem);
+    transform: translateY(-1rem) !important;
   }
   .h16.show{
     opacity: 100%;
-    transform: translateY(1rem);
+    transform: translateY(1rem) !important;
   }
   .Encrypth1.show{
     opacity: 100%;
-    transform: translateX(-1rem);
+    transform: translateX(-1rem) !important;
   }
   
   
