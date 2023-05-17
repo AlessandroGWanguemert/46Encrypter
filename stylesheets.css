@@ -120,6 +120,29 @@ body {
     transition: opacity 2.5s;
   }
   
+  .h14{
+    opacity: 0%;
+    transition: opacity 2s;
+  }
+  .h16{
+    opacity: 0%;
+    transition: opacity 2.5s;
+  }
+  .Encrypth1{
+    opacity: 0%;
+    transition: opacity 3s;
+  }
+  .h14.show{
+    opacity: 100%;
+  }
+  .h16.show{
+    opacity: 100%;
+  }
+  .Encrypth1.show{
+    opacity: 100%;
+  }
+  
+  
   textarea {
     width: 40rem;
     height: 8rem;
@@ -130,7 +153,6 @@ body {
     margin-top: 3rem;
     border: 1rem;
     resize: none;
-    
     display: flex;
     border-radius: 0px;
     font-size: 17pt;
@@ -174,19 +196,5 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    transition: opacity 2.5s;
-    
-    
   }
   
-  #texto-encriptado .show{
-    opacity: 100%;
-  }
-
-  #encriptar-btn{
-    transition: opacity 2.5s;
-
-  }
-  #encriptar-btn .show{
-    opacity: 100%;
-  }
