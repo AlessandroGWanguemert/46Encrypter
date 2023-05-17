@@ -137,8 +137,8 @@ body {
     position: relative;
     left: 1rem;
     opacity: 0%;
-    transition: opacity 3s;
-    transition-property: transform ;
+   
+    transition-property: transform, opacity ;
     transition-duration: 1s;
   }
   .h14.show{
