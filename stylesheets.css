@@ -79,9 +79,10 @@ body {
     border: solid 1px var(--BlancoTransparenteBorde);
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    transition: opacity 2.5s;
   }
 
-.Container .show{
+.Container.show{
   opacity: 100%;
 }
 
@@ -90,6 +91,7 @@ body {
     display: flex;
     flex-direction: row;
     color: var(--letra);
+    
   }
   .Switch h3 {
     font-size: 18px;
@@ -97,7 +99,7 @@ body {
     transition: color;
     transition-duration: 0.5s;
     padding: 0.1rem;
-    
+    transition: opacity 2.5s;
   }
   
   .Switch h3:hover{
@@ -105,13 +107,16 @@ body {
    color: #fff;
   }
 
-
+  .Switch h3 .show{
+    opacity: 100%;
+  }
 
 
   h1 {
     font-size: 3.5rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    transition: opacity 2.5s;
   }
   
   textarea {
@@ -134,7 +139,7 @@ body {
     text-decoration: none;
     color: #fff;
     background-color: var(--BgColorDarkTransparent);
-   
+    transition: opacity 2.5s;
     
   }
   textarea::placeholder {
@@ -168,8 +173,19 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
+    transition: opacity 2.5s;
+    
     
   }
   
+  #texto-encriptado .show{
+    opacity: 100%;
+  }
 
+  #encriptar-btn{
+    transition: opacity 2.5s;
 
+  }
+  #encriptar-btn .show{
+    opacity: 100%;
+  }
