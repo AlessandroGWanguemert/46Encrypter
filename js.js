@@ -37,7 +37,6 @@ window.onload = function(){
       }
     });
   });
-  123
   function esLetra(caracter) {
     return /^[a-zA-Z]+$/.test(caracter);
   }
@@ -74,7 +73,7 @@ window.onload = function(){
     }
   
     let numerosEncriptados = texto.split(" ");
-    let textoDesencriptado = "";
+    let textoDesencriptado = " ";
   
     for (let i = 0; i < numerosEncriptados.length; i++) {
       let numeroEncriptado = parseInt(numerosEncriptados[i]);
