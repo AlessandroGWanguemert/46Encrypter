@@ -124,7 +124,7 @@ body {
     opacity: 0%;
     bottom: 0.5rem;
     transition: opacity 2s;
-    transition: transform 2s;
+    
   }
   .h16{
     opacity: 0%;
@@ -138,15 +138,15 @@ body {
   }
   .h14.show{
     opacity: 100%;
-    transform: translateY(-0.5rem);
+   /* transform: translateY(-0.5rem);*/
   }
   .h16.show{
     opacity: 100%;
-    transform: translateY(0.5rem);
+  /*  transform: translateY(0.5rem);*/
   }
   .Encrypth1.show{
     opacity: 100%;
-    transform: translateX(-0.5rem);
+   /* transform: translateX(-0.5rem);*/
   }
   
   
