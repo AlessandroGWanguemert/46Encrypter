@@ -1,9 +1,10 @@
-window.onload = function(){
+window.onload = function() {
   $(document).ready(function() {
     setTimeout(function() {
       $("nav").addClass("show");
     }, 200);
   });
+
   $(document).ready(function() {
     $(".Decrypt").on("click", function() {
       $("#encriptar-btn").text("Decrypt");
@@ -12,14 +13,13 @@ window.onload = function(){
     $(".Encrypt").on("click", function() {
       $("#encriptar-btn").text("Encrypt");
     });
-
   });
 
   $(document).ready(function() {
     $("#encriptar-btn").click(function() {
       let texto = $("#texto-a-encriptar").val();
       let textoEncriptado;
-  
+
       if ($("#encriptar-btn").text() === "Encrypt") {
         textoEncriptado = encriptarTexto(texto);
         if (textoEncriptado !== null) {
@@ -37,60 +37,59 @@ window.onload = function(){
       }
     });
   });
+
   function esLetra(caracter) {
     return /^[a-zA-Z]+$/.test(caracter);
   }
-  
+
   function encriptarTexto(texto) {
     if (texto.length > 200) {
       return null;
     }
-  
+
     let textoEncriptado = "";
-  
+
     for (let i = 0; i < texto.length; i++) {
       let caracter = texto[i];
-  
+
       if (caracter !== " " && !esLetra(caracter)) {
         return null;
       }
-  
+
       if (caracter === " ") {
         textoEncriptado += " ";
       } else {
         let codigoAscii = texto.charCodeAt(i);
-        let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
+        let codigoEncriptado = Math.round((codigoAscii * 6) / 4);
         textoEncriptado += codigoEncriptado + " ";
       }
     }
-  
+
     return textoEncriptado.trim();
   }
-  
+
   function desencriptarTexto(texto) {
     if (texto.length > 200) {
       return null;
     }
-  
+
     let numerosEncriptados = texto.split(" ");
     let textoDesencriptado = "";
-  
+
     for (let i = 0; i < numerosEncriptados.length; i++) {
       if (numerosEncriptados[i] === "") {
         continue;
       }
-      let numerosEncriptados = parseInt(numerosEncriptados[i]);
-    }
-      if (isNaN(numerosEncriptados)) {
+      let numeroEncriptado = parseInt(numerosEncriptados[i]);
+      if (isNaN(numeroEncriptado)) {
         return null;
       }
-  
-      let codigoAscii = Math.round((numerosEncriptados * 4) / 60);
+
+      let codigoAscii = Math.round((numeroEncriptado * 4) / 6);
       let caracterDesencriptado = String.fromCharCode(codigoAscii);
       textoDesencriptado += caracterDesencriptado;
     }
-  
+
     return textoDesencriptado;
   }
-  
-
+}
