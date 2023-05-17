@@ -2,8 +2,12 @@ window.onload = function() {
   $(document).ready(function() {
     setTimeout(function() {
       $("nav").addClass("show");
+      $(".Container").addClass("show");
     }, 200);
+    
   });
+
+
 /*----------------------------Switch-btn------------------------------- */
   $(document).ready(function() {
     $(".Decrypt").on("click", function() {
