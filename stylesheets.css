@@ -81,7 +81,9 @@ body {
     backdrop-filter: blur(20px);
   }
 
-
+.Container .show{
+  opacity: 100%;
+}
 
   .Switch{
     position: relative;
