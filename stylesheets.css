@@ -139,7 +139,7 @@ body {
     opacity: 0%;
    
     transition-property: transform, opacity ;
-    transition-duration: 1s;
+    transition-duration: 2s;
   }
   .h14.show{
     opacity: 100%;
