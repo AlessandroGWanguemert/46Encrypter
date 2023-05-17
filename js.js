@@ -73,11 +73,14 @@ window.onload = function(){
     }
   
     let numerosEncriptados = texto.split(" ");
-    let textoDesencriptado = " ";
+    let textoDesencriptado = "";
   
     for (let i = 0; i < numerosEncriptados.length; i++) {
+      if (numerosEncriptados[i] === "") {
+        continue;
+      }
       let numeroEncriptado = parseInt(numerosEncriptados[i]);
-  
+    }
       if (isNaN(numeroEncriptado)) {
         return null;
       }
