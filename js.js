@@ -73,21 +73,21 @@ window.onload = function() {
       return null;
     }
   
-    let numerosEncriptados = texto.split(" ");
+    let palabrasEncriptadas = texto.trim().split(" ");
     let palabrasDesencriptadas = [];
   
-    for (let i = 0; i < numerosEncriptados.length; i++) {
-      let palabraEncriptada = numerosEncriptados[i];
+    for (let i = 0; i < palabrasEncriptadas.length; i++) {
+      let palabraEncriptada = palabrasEncriptadas[i];
   
       if (palabraEncriptada === "") {
         continue;
       }
   
-      let numerosEnPalabra = palabraEncriptada.split(",");
+      let numerosEncriptados = palabraEncriptada.split(",");
       let palabraDesencriptada = "";
   
-      for (let j = 0; j < numerosEnPalabra.length; j++) {
-        let numeroEncriptado = parseInt(numerosEnPalabra[j]);
+      for (let j = 0; j < numerosEncriptados.length; j++) {
+        let numeroEncriptado = parseInt(numerosEncriptados[j]);
   
         if (isNaN(numeroEncriptado)) {
           return null;
@@ -105,4 +105,5 @@ window.onload = function() {
   
     return textoDesencriptado;
   }
+  
 }
