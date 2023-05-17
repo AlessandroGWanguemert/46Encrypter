@@ -76,14 +76,16 @@ window.onload = function(){
     let textoDesencriptado = "";
   
     for (let i = 0; i < numerosEncriptados.length; i++) {
-      
+      if (numerosEncriptados[i] === "") {
+        continue;
+      }
       let numeroEncriptado = parseInt(numerosEncriptados[i]);
-  
+    }
       if (isNaN(numeroEncriptado)) {
         return null;
       }
   
-      let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
+      let codigoAscii = Math.round((numerosEncriptados * 4) / 60);
       let caracterDesencriptado = String.fromCharCode(codigoAscii);
       textoDesencriptado += caracterDesencriptado;
     }
@@ -91,4 +93,4 @@ window.onload = function(){
     return textoDesencriptado;
   }
   
-}
+
