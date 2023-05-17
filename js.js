@@ -72,37 +72,37 @@ window.onload = function() {
     if (texto.length > 200) {
       return null;
     }
-    
+  
     let palabrasEncriptadas = texto.trim().split(" ");
     let palabrasDesencriptadas = [];
-    
+  
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
-    
+  
       if (palabraEncriptada === "") {
         continue;
       }
-    
-      let numerosEncriptados = palabraEncriptada.split("");
+  
+      let numerosEncriptados = palabraEncriptada.split(",");
       let palabraDesencriptada = "";
-    
+  
       for (let j = 0; j < numerosEncriptados.length; j++) {
         let numeroEncriptado = parseInt(numerosEncriptados[j]);
-    
+  
         if (isNaN(numeroEncriptado)) {
           return null;
         }
-    
+  
         let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
         palabraDesencriptada += caracterDesencriptado;
       }
-    
+  
       palabrasDesencriptadas.push(palabraDesencriptada);
     }
-    
+  
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
-    
+  
     return textoDesencriptado;
   }
   
