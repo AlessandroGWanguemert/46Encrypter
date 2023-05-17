@@ -83,7 +83,7 @@ window.onload = function() {
         continue;
       }
   
-      let numerosEncriptados = palabraEncriptada.split(",");
+      let numerosEncriptados = palabraEncriptada.split(" ");
       let palabraDesencriptada = "";
   
       for (let j = 0; j < numerosEncriptados.length; j++) {
