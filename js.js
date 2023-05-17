@@ -72,24 +72,35 @@ window.onload = function() {
     if (texto.length > 200) {
       return null;
     }
-
-    let numerosEncriptados = texto.split(" ");
-    let textoDesencriptado = "";
-
-    for (let i = 0; i < numerosEncriptados.length; i++) {
-      if (numerosEncriptados[i] === "") {
+  
+    let palabrasEncriptadas = texto.split(" ");
+    let palabrasDesencriptadas = [];
+  
+    for (let i = 0; i < palabrasEncriptadas.length; i++) {
+      if (palabrasEncriptadas[i] === "") {
         continue;
       }
-      let numeroEncriptado = parseInt(numerosEncriptados[i]);
-      if (isNaN(numeroEncriptado)) {
-        return null;
+      let palabraEncriptada = palabrasEncriptadas[i];
+      let numerosEncriptados = palabraEncriptada.split(",");
+      let palabraDesencriptada = "";
+  
+      for (let j = 0; j < numerosEncriptados.length; j++) {
+        let numeroEncriptado = parseInt(numerosEncriptados[j]);
+        if (isNaN(numeroEncriptado)) {
+          return null;
+        }
+  
+        let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
+        let caracterDesencriptado = String.fromCharCode(codigoAscii);
+        palabraDesencriptada += caracterDesencriptado;
       }
-
-      let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
-      let caracterDesencriptado = String.fromCharCode(codigoAscii);
-      textoDesencriptado += caracterDesencriptado;
+  
+      palabrasDesencriptadas.push(palabraDesencriptada);
     }
-
+  
+    let textoDesencriptado = palabrasDesencriptadas.join(" ");
+  
     return textoDesencriptado;
   }
+  
 }
