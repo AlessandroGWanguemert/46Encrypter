@@ -123,19 +123,19 @@ body {
   .h14{
     position: relative;
     opacity: 0%;
-    bottom: 0.5rem;
+    bottom: 1rem;
     transition: opacity 2s;
     
   }
   .h16{
     position: relative;
     opacity: 0%;
-    top: 0.5rem;
+    top: 1rem;
     transition: opacity 2.5s;
   }
   .Encrypth1{
     position: relative;
-    right: 0.5rem;
+    left: 1rem;
     opacity: 0%;
     transition: opacity 3s;
   }
