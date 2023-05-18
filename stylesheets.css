@@ -142,19 +142,19 @@ body {
     transition-duration: 3s;
   }
   
-  .h14.show {
+  .h1 .h14.show {
     opacity: 100%;
     transform: translate(0, -1rem) !important;
   }
   
-  .h16.show {
+  .h1 .h16.show {
     opacity: 100%;
     transform: translate(0, 1rem) !important;
   }
   
-  .Encrypth1.show {
+  .h1 .Encrypth1.show {
     opacity: 100%;
-    transform: translate(-5rem, 0) !important;
+    transform: translate(-1rem, 0) !important;
   }
   
   
