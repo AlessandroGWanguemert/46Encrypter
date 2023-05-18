@@ -3,8 +3,9 @@ window.onload = function() {
     setTimeout(function() {
       $("nav").addClass("show");
       $(".Container").addClass("show");
-      $(".h1").addClass("show");
-      
+      $(".h14").addClass("show");
+      $(".h16").addClass("show");
+      $(".Encrypth1").addClass("show");
     }, 200);
     
   });
