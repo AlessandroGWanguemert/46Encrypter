@@ -68,7 +68,7 @@ body {
  .Container {
     position: fixed;
     
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -132,7 +132,7 @@ body {
     position: relative;
     opacity: 0%;
     bottom: 1rem;
-    transition: opacity 2s, transform 2s;
+    transition: opacity 2s, transform 1s;
    
     
   }
@@ -140,14 +140,14 @@ body {
     position: relative;
     opacity: 0%;
     top: 1rem;
-    transition: opacity 2.5s, transform 2s;
+    transition: opacity 2.5s, transform 1s;
    
   }
   .Encrypth1{
     position: relative;
     left: 1rem;
     opacity: 0%;
-    transition: opacity 3s, transform 2s;
+    transition: opacity 3s, transform 1s;
    
     
 
