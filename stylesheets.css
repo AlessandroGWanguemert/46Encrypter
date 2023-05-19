@@ -119,7 +119,7 @@ body {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
     
@@ -152,12 +152,12 @@ body {
   
   .h1 .h14.show {
     opacity: 100%;
-    transform: translate(0, -1rem) !important;
+    transform: translate(0, 1rem) !important;
   }
   
   .h1 .h16.show {
     opacity: 100%;
-    transform: translate(0, 1rem) !important;
+    transform: translate(0, -1rem) !important;
   }
   
   .h1 .Encrypth1.show {
