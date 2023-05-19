@@ -2,9 +2,16 @@ window.onload = function() {
   $(document).ready(function() {
     setTimeout(function() {
       $("nav").addClass("show");
+      $(".Container").addClass("show");
+      $(".h14").addClass("show");
+      $(".h16").addClass("show");
+      $(".Encrypth1").addClass("show");
     }, 200);
+    
   });
 
+
+/*----------------------------Switch-btn------------------------------- */
   $(document).ready(function() {
     $(".Decrypt").on("click", function() {
       $("#encriptar-btn").text("Decrypt");
@@ -14,7 +21,7 @@ window.onload = function() {
       $("#encriptar-btn").text("Encrypt");
     });
   });
-
+/*----------------------------Encrypt-Decrypt-----------------------------*/
   $(document).ready(function() {
     $("#encriptar-btn").click(function() {
       let texto = $("#texto-a-encriptar").val();

@@ -66,28 +66,36 @@ body {
 
  
  .Container {
-    position: relative;
+    position: fixed;
+    
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     height: 35rem;
-    width: auto;
+    width: 55rem;
     max-width: 800px;
     align-items: center;
-    margin: 10rem auto;
     padding: 2rem;
     background-color: var(--FondoTransparente) ;
     border: solid 1px var(--BlancoTransparenteBorde);
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    opacity: 0%;
+    transition: opacity 1.5s;
   }
 
-
+.Container.show{
+  opacity: 100%;
+}
 
   .Switch{
     position: relative;
     display: flex;
     flex-direction: row;
     color: var(--letra);
+    
   }
   .Switch h3 {
     font-size: 18px;
@@ -95,7 +103,7 @@ body {
     transition: color;
     transition-duration: 0.5s;
     padding: 0.1rem;
-    
+    transition: opacity 2.5s;
   }
   
   .Switch h3:hover{
@@ -103,14 +111,63 @@ body {
    color: #fff;
   }
 
+  .Switch h3 .show{
+    opacity: 100%;
+  }
 
-
+  .FlexContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    
   }
+  
+  .h14{
+    position: relative;
+    opacity: 0%;
+    bottom: 1rem;
+    transition: opacity 2s, transform 1s;
+   
+    
+  }
+  .h16{
+    position: relative;
+    opacity: 0%;
+    top: 1rem;
+    transition: opacity 2.5s, transform 1s;
+   
+  }
+  .Encrypth1{
+    position: relative;
+    left: 1rem;
+    opacity: 0%;
+    transition: opacity 3s, transform 2s;
+   
+    
+
+  }
+  
+  .h1 .h14.show {
+    opacity: 100%;
+    transform: translate(0, 1rem) !important;
+  }
+  
+  .h1 .h16.show {
+    opacity: 100%;
+    transform: translate(0, -1rem) !important;
+  }
+  
+  .h1 .Encrypth1.show {
+    opacity: 100%;
+    transform: translate(-1rem, 0) !important;
+  }
+  
   
   textarea {
     width: 40rem;
@@ -122,7 +179,6 @@ body {
     margin-top: 3rem;
     border: 1rem;
     resize: none;
-    
     display: flex;
     border-radius: 0px;
     font-size: 17pt;
@@ -132,7 +188,7 @@ body {
     text-decoration: none;
     color: #fff;
     background-color: var(--BgColorDarkTransparent);
-   
+    transition: opacity 2.5s;
     
   }
   textarea::placeholder {
@@ -166,8 +222,37 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    
   }
   
+/*----------------------------------responsive----------------------------------------*/
 
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas, como teléfonos móviles */
+  .Container{
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    left: 50%;
+    top: 55%;
+    width: 70%;
+    height: 80%;
+  }
+  textarea{
+    height: 60%;
+  }
+}
 
+@media (min-width: 769px) and (max-width: 1200px) {
+  /* Estilos para pantallas medianas, como tablets */
+  .Container{
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    left: 50%;
+    top: 55%;
+   
+  }
+}
+
+@media (min-width: 1201px) {
+  /* Estilos para pantallas grandes, como escritorios */
+  body{
+    font-size: 16px;
+  }
+}
