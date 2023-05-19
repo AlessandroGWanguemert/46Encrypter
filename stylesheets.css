@@ -235,6 +235,9 @@ body {
     width: 70%;
     height: 80%;
   }
+  .textarea{
+    height: 50%S;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
