@@ -112,6 +112,11 @@ body {
     opacity: 100%;
   }
 
+  .FlexContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
   h1 {
     font-size: 3.5rem;
@@ -123,7 +128,7 @@ body {
   .h14{
     position: relative;
     opacity: 0%;
-   
+    bottom: 1rem;
     transition: opacity 2s, transform 2s;
    
     
@@ -131,13 +136,13 @@ body {
   .h16{
     position: relative;
     opacity: 0%;
-   
+    top: 1rem;
     transition: opacity 2.5s, transform 2s;
    
   }
   .Encrypth1{
     position: relative;
-    
+    left: 1rem;
     opacity: 0%;
     transition: opacity 3s, transform 2s;
    
