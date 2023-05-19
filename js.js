@@ -70,10 +70,10 @@ window.onload = function() {
   
         let codigoAscii = caracter.charCodeAt(0);
         let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
-        palabraEncriptada += codigoEncriptado + "00";  // Modified separator to "00"
+        palabraEncriptada += codigoEncriptado + " ";  // Modified separator to " "
       }
   
-      palabrasEncriptadas.push(palabraEncriptada.slice(0, -2));  // Remove the last "00" separator
+      palabrasEncriptadas.push(palabraEncriptada.slice(0, -2));  // Remove the last " " separator
     }
   
     let textoEncriptado = palabrasEncriptadas.join(" ");
@@ -96,7 +96,7 @@ window.onload = function() {
         continue;
       }
   
-      let numerosEncriptados = palabraEncriptada.split("00");  // Modified separator to "00"
+      let numerosEncriptados = palabraEncriptada.split(" ");  // Modified separator to " "
       let palabraDesencriptada = "";
   
       for (let j = 0; j < numerosEncriptados.length; j++) {
