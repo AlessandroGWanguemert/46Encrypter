@@ -235,8 +235,8 @@ body {
     width: 70%;
     height: 80%;
   }
-  .textarea{
-    height: 30rem;
+  textarea{
+    height: 50%;
   }
 }
 
