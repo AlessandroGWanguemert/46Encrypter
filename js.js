@@ -59,7 +59,7 @@ window.onload = function() {
   
     for (let i = 0; i < palabras.length; i++) {
       let palabra = palabras[i];
-      let palabraEncriptada = "";
+      let palabraEncriptada = " ";
   
       for (let j = 0; j < palabra.length; j++) {
         let caracter = palabra[j];
@@ -76,7 +76,7 @@ window.onload = function() {
       palabrasEncriptadas.push(palabraEncriptada);
     }
   
-    let textoEncriptado = palabrasEncriptadas.join("");
+    let textoEncriptado = palabrasEncriptadas.join(" ");
   
     return textoEncriptado;
   }
