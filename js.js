@@ -46,32 +46,6 @@ window.onload = function() {
     if (texto.length > 200) {
       return null;
     }
-
-    let textoEncriptado = "";
-
-    for (let i = 0; i < texto.length; i++) {
-      let caracter = texto[i];
-
-      if (caracter !== " " && !esLetra(caracter)) {
-        return null;
-      }
-
-      if (caracter === " ") {
-        textoEncriptado += " ";
-      } else {
-        let codigoAscii = texto.charCodeAt(i);
-        let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
-        textoEncriptado += codigoEncriptado + " ";
-      }
-    }
-
-    return textoEncriptado.trim();
-  }
-
-  function encriptarTexto(texto) {
-    if (texto.length > 200) {
-      return null;
-    }
   
     let palabras = texto.trim().split(" ");
     let palabrasEncriptadas = [];
@@ -89,10 +63,10 @@ window.onload = function() {
   
         let codigoAscii = caracter.charCodeAt(0);
         let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
-        palabraEncriptada += codigoEncriptado + ",";
+        palabraEncriptada += codigoEncriptado + "00";  // Modified separator to "00"
       }
   
-      palabrasEncriptadas.push(palabraEncriptada.slice(0, -1));
+      palabrasEncriptadas.push(palabraEncriptada.slice(0, -2));  // Remove the last "00" separator
     }
   
     let textoEncriptado = palabrasEncriptadas.join(" ");
@@ -115,7 +89,7 @@ window.onload = function() {
         continue;
       }
   
-      let numerosEncriptados = palabraEncriptada.split(",");
+      let numerosEncriptados = palabraEncriptada.split("00");  // Modified separator to "00"
       let palabraDesencriptada = "";
   
       for (let j = 0; j < numerosEncriptados.length; j++) {
@@ -137,6 +111,5 @@ window.onload = function() {
   
     return textoDesencriptado;
   }
-  
   
 }
