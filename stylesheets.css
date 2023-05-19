@@ -234,6 +234,8 @@ body {
   /* Estilos para pantallas medianas, como tablets */
   .Container{
     transform: scale(0.8);
+    left: 50%;
+    transform:translateX(-50%)
   }
 }
 
