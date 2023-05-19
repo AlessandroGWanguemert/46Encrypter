@@ -92,11 +92,11 @@ window.onload = function() {
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
   
-      if (palabraEncriptada === "") {
+      if (palabraEncriptada === " ") {
         continue;
       }
   
-      let palabraDesencriptada = "";
+      let palabraDesencriptada = " ";
   
       for (let j = 0; j < palabraEncriptada.length; j += 2) {
         let codigoEncriptado = parseInt(palabraEncriptada.substr(j, 2));
