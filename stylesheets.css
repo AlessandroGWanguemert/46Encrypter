@@ -224,3 +224,22 @@ body {
     margin-top: 20px;
   }
   
+/*----------------------------------responsive----------------------------------------*/
+
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas, como teléfonos móviles */
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  /* Estilos para pantallas medianas, como tablets */
+  .Container{
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 1201px) {
+  /* Estilos para pantallas grandes, como escritorios */
+  body{
+    font-size: 16px;
+  }
+}
