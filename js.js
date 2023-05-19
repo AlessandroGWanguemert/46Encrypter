@@ -70,17 +70,16 @@ window.onload = function() {
   
         let codigoAscii = caracter.charCodeAt(0);
         let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
-        palabraEncriptada += codigoEncriptado + " ";  // Modified separator to a blank space
+        palabraEncriptada += codigoEncriptado;
       }
   
-      palabrasEncriptadas.push(palabraEncriptada.trim());  // Remove extra spaces around the word
+      palabrasEncriptadas.push(palabraEncriptada);
     }
   
-    let textoEncriptado = palabrasEncriptadas.join(" ");
+    let textoEncriptado = palabrasEncriptadas.join("");
   
     return textoEncriptado;
   }
-  
   
   function desencriptarTexto(texto) {
     if (texto.length > 200) {
@@ -97,17 +96,16 @@ window.onload = function() {
         continue;
       }
   
-      let numerosEncriptados = palabraEncriptada.split(" ");
       let palabraDesencriptada = "";
   
-      for (let j = 0; j < numerosEncriptados.length; j++) {
-        let numeroEncriptado = parseInt(numerosEncriptados[j]);
+      for (let j = 0; j < palabraEncriptada.length; j += 2) {
+        let codigoEncriptado = parseInt(palabraEncriptada.substr(j, 2));
   
-        if (isNaN(numeroEncriptado)) {
+        if (isNaN(codigoEncriptado)) {
           return null;
         }
   
-        let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
+        let codigoAscii = Math.round((codigoEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
         palabraDesencriptada += caracterDesencriptado;
       }
@@ -119,5 +117,6 @@ window.onload = function() {
   
     return textoDesencriptado;
   }
+  
   
 }
