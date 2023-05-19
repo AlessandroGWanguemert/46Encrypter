@@ -232,7 +232,8 @@ body {
     transform: translateX(-50%) translateY(-50%) scale(0.8);
     left: 50%;
     top: 50%;
-    width: 50%;
+    width: 70%;
+    height: 60%;
   }
 }
 
