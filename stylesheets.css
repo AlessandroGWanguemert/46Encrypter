@@ -231,7 +231,9 @@ body {
   .Container{
     transform: translateX(-50%) translateY(-50%) scale(0.8);
     left: 50%;
-    top: 50%;}
+    top: 50%;
+    width: 30%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
