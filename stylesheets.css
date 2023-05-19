@@ -231,7 +231,7 @@ body {
   .Container{
     transform: translateX(-50%) translateY(-50%) scale(0.8);
     left: 50%;
-    top: 50%;
+    top: 55%;
     width: 70%;
     height: 80%;
   }
@@ -245,7 +245,7 @@ body {
   .Container{
     transform: translateX(-50%) translateY(-50%) scale(0.8);
     left: 50%;
-    top: 50%;
+    top: 55%;
    
   }
 }
