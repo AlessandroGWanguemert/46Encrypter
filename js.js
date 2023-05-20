@@ -35,18 +35,10 @@ window.onload = function() {
         }
       } else if ($("#encriptar-btn").text() === "Decrypt") {
         textoEncriptado = desencriptarTexto(texto);
-        if (textoEncriptado !== null) {
-          $("#texto-a-encriptar").val(textoEncriptado);
-        } else {
-          alert("Error: El texto debe tener un máximo de 200 caracteres y solo puede contener números separados por espacios.");
-        }
+        $("#texto-a-encriptar").val(textoEncriptado);
       }
     });
   });
-
-  function esNumeroSeparadoPorEspacio(texto) {
-    return /^(\d+\s)*\d+$/.test(texto);
-  }
 
   function encriptarTexto(texto) {
     if (texto.length > 200 || !/^[a-zA-Z\s]+$/.test(texto)) {
@@ -71,10 +63,6 @@ window.onload = function() {
   }
 
   function desencriptarTexto(texto) {
-    if (texto.length > 200) {
-      return null;
-    }
-
     let palabrasEncriptadas = texto.trim().split(" ");
     let palabrasDesencriptadas = [];
 
@@ -90,10 +78,6 @@ window.onload = function() {
 
       for (let j = 0; j < numerosEncriptados.length; j++) {
         let numeroEncriptado = parseInt(numerosEncriptados[j]);
-
-        if (isNaN(numeroEncriptado)) {
-          return null;
-        }
 
         let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
@@ -111,4 +95,3 @@ window.onload = function() {
     return textoDesencriptado;
   }
 };
-
