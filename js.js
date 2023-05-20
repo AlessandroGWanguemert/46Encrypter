@@ -44,12 +44,12 @@ window.onload = function() {
     });
   });
 
-  function esLetra(caracter) {
-    return /^[a-zA-Z]+$/.test(caracter);
+  function esNumeroSeparadoPorEspacio(texto) {
+    return /^(\d+\s)*\d+$/.test(texto);
   }
 
   function encriptarTexto(texto) {
-    if (texto.length > 200) {
+    if (texto.length > 200 || !/^[a-zA-Z\s]+$/.test(texto)) {
       return null;
     }
 
@@ -57,10 +57,6 @@ window.onload = function() {
 
     for (let i = 0; i < texto.length; i++) {
       let caracter = texto[i];
-
-      if (caracter !== " " && !esLetra(caracter)) {
-        return null;
-      }
 
       if (caracter === " ") {
         textoEncriptado += " ";
@@ -75,44 +71,40 @@ window.onload = function() {
   }
 
   function desencriptarTexto(texto) {
-    if (texto.length > 200) {
+    if (texto.length > 200 || !esNumeroSeparadoPorEspacio(texto)) {
       return null;
     }
-  
+
     let palabrasEncriptadas = texto.trim().split(" ");
     let palabrasDesencriptadas = [];
-  
+
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
-  
+
       if (palabraEncriptada === "") {
         continue;
       }
-  
+
       let numerosEncriptados = palabraEncriptada.split("00");
       let palabraDesencriptada = "";
-  
+
       for (let j = 0; j < numerosEncriptados.length; j++) {
         let numeroEncriptado = parseInt(numerosEncriptados[j]);
-  
+
         if (isNaN(numeroEncriptado)) {
           return null;
         }
-  
+
         let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
         palabraDesencriptada += caracterDesencriptado;
       }
-  
+
       palabrasDesencriptadas.push(palabraDesencriptada);
     }
-  
+
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
-  
-    // Eliminar "00" que sean continuación de una secuencia de 4 números
-    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
-  
+
     return textoDesencriptado;
   }
-  
-}
+};
