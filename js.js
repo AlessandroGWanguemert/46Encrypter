@@ -91,7 +91,9 @@ window.onload = function() {
 
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
 
+    // Eliminar "00" que están después de 4 números
+    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
+
     return textoDesencriptado;
   }
 };
-
