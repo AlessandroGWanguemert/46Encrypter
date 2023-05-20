@@ -45,21 +45,27 @@ window.onload = function() {
       return null;
     }
 
-    let textoEncriptado = "";
+    let palabras = texto.trim().split(" ");
+    let palabrasEncriptadas = [];
 
-    for (let i = 0; i < texto.length; i++) {
-      let caracter = texto[i];
+    for (let i = 0; i < palabras.length; i++) {
+      let palabra = palabras[i];
+      let palabraEncriptada = "";
 
-      if (caracter === " ") {
-        textoEncriptado += " ";
-      } else {
-        let codigoAscii = texto.charCodeAt(i);
+      for (let j = 0; j < palabra.length; j++) {
+        let caracter = palabra[j];
+
+        let codigoAscii = caracter.charCodeAt(0);
         let codigoEncriptado = Math.round((codigoAscii * 60) / 4);
-        textoEncriptado += codigoEncriptado + "00";
+        palabraEncriptada += codigoEncriptado + "00";
       }
+
+      palabrasEncriptadas.push(palabraEncriptada.trim());
     }
 
-    return textoEncriptado.trim();
+    let textoEncriptado = palabrasEncriptadas.join(" ");
+
+    return textoEncriptado;
   }
 
   function desencriptarTexto(texto) {
@@ -68,10 +74,6 @@ window.onload = function() {
 
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
-
-      if (palabraEncriptada === "") {
-        continue;
-      }
 
       let numerosEncriptados = palabraEncriptada.split("00");
       let palabraDesencriptada = "";
@@ -89,9 +91,7 @@ window.onload = function() {
 
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
 
-    // Eliminar "00" que sean continuación de una secuencia de 4 números
-    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
-
     return textoDesencriptado;
   }
 };
+
