@@ -78,37 +78,41 @@ window.onload = function() {
     if (texto.length > 200) {
       return null;
     }
-
+  
     let palabrasEncriptadas = texto.trim().split(" ");
     let palabrasDesencriptadas = [];
-
+  
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
-
+  
       if (palabraEncriptada === "") {
         continue;
       }
-
+  
       let numerosEncriptados = palabraEncriptada.split("00");
       let palabraDesencriptada = "";
-
+  
       for (let j = 0; j < numerosEncriptados.length; j++) {
         let numeroEncriptado = parseInt(numerosEncriptados[j]);
-
+  
         if (isNaN(numeroEncriptado)) {
           return null;
         }
-
+  
         let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
         palabraDesencriptada += caracterDesencriptado;
       }
-
+  
       palabrasDesencriptadas.push(palabraDesencriptada);
     }
-
+  
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
-
+  
+    // Eliminar "00" que sean continuación de una secuencia de 4 números
+    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
+  
     return textoDesencriptado;
   }
+  
 }
