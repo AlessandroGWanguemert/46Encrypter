@@ -75,7 +75,7 @@ window.onload = function() {
     for (let i = 0; i < palabrasEncriptadas.length; i++) {
       let palabraEncriptada = palabrasEncriptadas[i];
 
-      let numerosEncriptados = palabraEncriptada.split("00");
+      let numerosEncriptados = palabraEncriptada.split(/(?<=\d{4})00/);
       let palabraDesencriptada = "";
 
       for (let j = 0; j < numerosEncriptados.length; j++) {
@@ -91,9 +91,7 @@ window.onload = function() {
 
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
 
-    // Eliminar "00" que están después de 4 números
-    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
-
     return textoDesencriptado;
   }
 };
+
