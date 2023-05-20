@@ -71,7 +71,7 @@ window.onload = function() {
   }
 
   function desencriptarTexto(texto) {
-    if (texto.length > 200 || !esNumeroSeparadoPorEspacio(texto)) {
+    if (texto.length > 200) {
       return null;
     }
 
@@ -104,6 +104,9 @@ window.onload = function() {
     }
 
     let textoDesencriptado = palabrasDesencriptadas.join(" ");
+
+    // Eliminar "00" que sean continuación de una secuencia de 4 números
+    textoDesencriptado = textoDesencriptado.replace(/(\d{4})00/g, "$1");
 
     return textoDesencriptado;
   }
