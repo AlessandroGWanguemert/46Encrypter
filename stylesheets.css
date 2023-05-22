@@ -14,7 +14,8 @@ body{
 
 
 body {
-    background-color: var(--Bgcolor);
+    background: -webkit-linear-gradient(to left, #0b8793, #360033); 
+    background: linear-gradient(to left, #0b8793, #360033); 
     color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: 16px;
