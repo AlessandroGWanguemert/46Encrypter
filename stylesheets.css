@@ -20,6 +20,10 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
   }
+
+  .particles{
+    z-index: 0;
+  }
   /*--------------------------Nav--------------------------------*/ 
   nav {
     background-color: transparent;
