@@ -183,7 +183,7 @@ body {
     border-radius: 0px;
     font-size: 17pt;
     border: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #fffefe;
     outline-style: none;
     text-decoration: none;
     color: #fff;
@@ -193,6 +193,7 @@ body {
   }
   textarea::placeholder {
       text-align: center;
+      color: #fff;
      margin: auto;
      line-height: 5;
       font-size: 17pt;
