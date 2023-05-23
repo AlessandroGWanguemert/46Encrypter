@@ -9,6 +9,14 @@ window.onload = function() {
     }, 200);
   });
 
+  $.ajax({
+    url: 'particles-config.json',
+    dataType: 'json',
+    success: function(data) {
+      // Llamada a la función de inicialización de particles.js con la configuración cargada
+      particlesJS('particles-js', data);
+    }
+  });
   /*----------------------------Switch-btn------------------------------- */
   $(document).ready(function() {
     $(".Decrypt").on("click", function() {
