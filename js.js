@@ -10,7 +10,7 @@ window.onload = function() {
   });
 
   $.ajax({
-    url: 'particles-config.json',
+    url: 'particlesjs-config.json',
     dataType: 'json',
     success: function(data) {
       // Llamada a la función de inicialización de particles.js con la configuración cargada
