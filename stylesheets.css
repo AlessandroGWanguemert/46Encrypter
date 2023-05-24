@@ -6,6 +6,8 @@
     --FondoTransparente:#ffffff1c;
     --BgColorDarkTransparent:#8b8b8b23;
     --letra:#999;
+    --ComplementoFondo:#360033;
+    --ComplementoFondo:#01d4e7;
 }
 body{
    
@@ -96,7 +98,7 @@ body {
 .Container.show{
   opacity: 100%;
 }
-
+/*---------------------Switch----------------------*/
   .Switch{
     position: relative;
     display: flex;
@@ -122,6 +124,9 @@ body {
     opacity: 100%;
   }
 
+  .Encrypt{}
+  .Decrypt{}
+/*-----------------------*/
   .FlexContainer{
     position: relative;
     display: flex;

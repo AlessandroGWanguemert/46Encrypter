@@ -8,7 +8,7 @@ window.onload = function() {
       $(".Encrypth1").addClass("show");
     }, 200);
   });
-
+/*-------------------Cargar-particulas---------------------------*/
   $.ajax({
     url: 'particlesjs-config.json',
     dataType: 'json',
@@ -21,6 +21,7 @@ window.onload = function() {
   $(document).ready(function() {
     $(".Decrypt").on("click", function() {
       $("#encriptar-btn").text("Decrypt");
+      $("#encriptar-btn").addClass("Color1")
     });
 
     $(".Encrypt").on("click", function() {
