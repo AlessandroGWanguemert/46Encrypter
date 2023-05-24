@@ -127,10 +127,10 @@ body {
   .Decrypt{
     transition: color 1s;
   }
-  .Encrypt :hover{
+  .Encrypt:hover{
     color: var(--ComplementoFondo);
   }
-  .Decrypt :hover{
+  .Decrypt:hover{
     color: var(--ComplementoFondo1);
   }
 /*-----------------------*/
