@@ -7,7 +7,7 @@
     --BgColorDarkTransparent:#8b8b8b23;
     --letra:#999;
     --ComplementoFondo:#360033;
-    --ComplementoFondo:#01d4e7;
+    --ComplementoFondo1:#01d4e7;
 }
 body{
    
@@ -115,17 +115,24 @@ body {
     transition: opacity 2.5s;
   }
   
-  .Switch h3:hover{
-   
-   color: #fff;
-  }
+ 
 
   .Switch h3 .show{
     opacity: 100%;
   }
 
-  .Encrypt{}
-  .Decrypt{}
+  .Encrypt{
+    transition: color 1s;
+  }
+  .Decrypt{
+    transition: color 1s;
+  }
+  .Encrypt :hover{
+    color: var(--ComplementoFondo);
+  }
+  .Decrypt :hover{
+    color: var(--ComplementoFondo1);
+  }
 /*-----------------------*/
   .FlexContainer{
     position: relative;
