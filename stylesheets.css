@@ -109,8 +109,6 @@ body {
   .Switch h3 {
     font-size: 18px;
     margin: 0.5rem;
-    transition: color;
-    transition-duration: 0.5s;
     padding: 0.1rem;
     transition: opacity 2.5s;
   }
@@ -122,10 +120,10 @@ body {
   }
 
   .Encrypt{
-    transition: color 1s;
+    transition: color 1s !important;
   }
   .Decrypt{
-    transition: color 1s;
+    transition: color 1s !important;
   }
   .Encrypt:hover{
     color: var(--ComplementoFondo);
