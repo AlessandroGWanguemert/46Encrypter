@@ -1,13 +1,20 @@
 :root{
-    --ColorPrimario: #00ffaa ;
     --Bgcolor: #323236;
     --BgcolorComplement:#474747c9;
     --BlancoTransparenteBorde:#ffffffb7;
     --FondoTransparente:#ffffff1c;
     --BgColorDarkTransparent:#8b8b8b23;
     --letra:#999;
-    --ComplementoFondo:#fd96d2;
-    --ComplementoFondo1:#a2f9ff;
+    --BotonEncrypt:#da45ad23;
+    --BotonEncryptB:#63104a4f;
+    --BotonEncryptL:#ff66ae46;
+    --BotonDecrypt:#128ba059;
+    --BotonDecryptB:#0b566344;
+    --BotonDecryptL:#4de4ff67;
+    --BotonDecryptComp:#3412817c;
+    --BotonDecryptComp2:#d893f3c2;
+    --Encrypt:#f5a8c8f6;
+    --Decrypt:#a8ecf5f6;
 }
 body{
    
@@ -104,7 +111,6 @@ body {
     display: flex;
     flex-direction: row;
     color: var(--letra);
-    
   }
   .Switch h3 {
     font-size: 18px;
@@ -121,16 +127,37 @@ body {
 
   .Encrypt{
     transition: color 1s !important;
+    
   }
   .Decrypt{
     transition: color 1s !important;
+    
   }
-  .Encrypt:hover{
-    color: var(--ComplementoFondo);
-  }
-  .Decrypt:hover{
+  .Decrypt .Color22{
     color: var(--ComplementoFondo1);
   }
+ 
+  .Encrypt:hover{
+    color: var(--Encrypt);
+  }
+  .Decrypt:hover{
+    color: var(--Decrypt);
+  }
+
+  .sphere{/* Estilos para la esfera */
+      position: relative;
+      width: 0.7rem;
+      height: 0.7rem;
+      background-color: var(--Encrypt); 
+      border-radius: 50%;
+      top: 3rem;
+      left: -8.5rem;
+      transition: transform 0.5s ease-in-out, background-color 0.5s;
+    }
+    .sphere.ColorS{
+      background-color: var(--Decrypt); 
+      
+    }
 /*-----------------------*/
   .FlexContainer{
     position: relative;
@@ -141,17 +168,14 @@ body {
   h1 {
     font-size: 4rem;
     margin-top: 2rem;
-    margin-bottom: 3rem;
-    
+    margin-bottom: 3rem;  
   }
   
   .h14{
     position: relative;
     opacity: 0%;
     bottom: 1rem;
-    transition: opacity 2s, transform 1s;
-   
-    
+    transition: opacity 2s, transform 1s; 
   }
   .h16{
     position: relative;
@@ -165,10 +189,7 @@ body {
     left: 1rem;
     opacity: 0%;
     transition: opacity 3s, transform 2s;
-   
-    
-
-  }
+   }
   
   .h1 .h14.show {
     opacity: 100%;
@@ -192,7 +213,7 @@ body {
     max-width: 100%;
     max-height: 200px;
     padding: 1rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     border: 1rem;
     resize: none;
     display: flex;
@@ -209,31 +230,47 @@ body {
   }
   textarea::placeholder {
       text-align: center;
-      color: #fff;
+      color: var(--letra);
      margin: auto;
      line-height: 5;
       font-size: 17pt;
-      
       }
   button {
     position: relative;
+    width: 7.5rem;
     padding: 0.7rem 1.2rem;
     margin: 2rem;
-    background-color: #333;
+    background: linear-gradient(to right, var(--BotonEncryptB) 50%, var(--BotonDecryptComp));
+    background-color: var(--BotonEncrypt);
     color: #fff;
     top: 1rem;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    
-  }
+    transition: all 0.6s ease-in-out;
+     }
   
   button:hover {
-    background-color: #555;
+    background-color: var(--BotonEncryptL) ;
   
   }
+
+  #encriptar-btn.Color1{
+    background: linear-gradient(to right, var(--BotonEncryptB) 50%, var(--BotonDecryptComp));
+    background-color: var(--BotonEncrypt);
+   }
+   #encriptar-btn.Color1:hover{
+    background-color: var(--BotonEncryptL);
+   }
+   #encriptar-btn.Color2{
+    background: linear-gradient(to left, var(--BotonDecryptB) 50%, var(--BotonDecryptComp));
+    background-color: var(--BotonDecrypt);
+   
+   }
+   #encriptar-btn.Color2:hover{
+    background-color: var(--BotonDecryptL);
+   }
   
   #texto-encriptado {
     font-size: 18px;
@@ -251,6 +288,7 @@ body {
     top: 55%;
     width: 70%;
     height: 80%;
+   
   }
   textarea{
     height: 60%;

@@ -1,0 +1,26 @@
+
+:root{
+    --gradiente-izquierdo:blue;
+    --gradiente-derecho:red;
+}
+.gradient-text {
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--gradiente-izquierdo), var(--gradiente-derecho));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: gradient-animation 5s infinite linear;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
