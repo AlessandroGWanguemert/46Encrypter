@@ -149,7 +149,7 @@ $(document).ready(function() {
 
         let codigoAscii = Math.round((numeroEncriptado * 4) / 60);
         let caracterDesencriptado = String.fromCharCode(codigoAscii);
-        palabraDesencriptada += caracterDesencriptado;
+        palabraEncriptada += String.fromCharCode(codigoEncriptado);
       }
 
       palabrasDesencriptadas.push(palabraDesencriptada);
