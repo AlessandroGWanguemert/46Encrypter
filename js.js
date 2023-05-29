@@ -141,7 +141,7 @@ function desencriptarTexto(texto) {
   for (let i = 0; i < palabrasEncriptadas.length; i++) {
     let palabraEncriptada = palabrasEncriptadas[i];
 
-    let numerosEncriptados = palabraEncriptada.split(/(?<=\d{4})00/);
+    let numerosEncriptados = palabraEncriptada.split(/(?<=\d{4})0{2}(?!0)/);
     let palabraDesencriptada = "";
 
     for (let j = 0; j < numerosEncriptados.length; j++) {
@@ -159,4 +159,7 @@ function desencriptarTexto(texto) {
 
   return textoDesencriptado;
 }
+
+
+
 }
